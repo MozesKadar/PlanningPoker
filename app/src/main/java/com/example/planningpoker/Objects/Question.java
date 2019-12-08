@@ -3,7 +3,7 @@ package com.example.planningpoker.Objects;
 import java.util.ArrayList;
 
 public class Question {
-    private String question,questionID;
+    private String question,questionID,alpha,omega;
     private ArrayList<Result> results;
 
     public Question() {
@@ -37,6 +37,22 @@ public class Question {
 
     public void setQuestionID(String questionID) {
         this.questionID = questionID;
+    }
+
+    public String getAlpha() {
+        return alpha;
+    }
+
+    public void setAlpha(String alpha) {
+        this.alpha = alpha;
+    }
+
+    public String getOmega() {
+        return omega;
+    }
+
+    public void setOmega(String omega) {
+        this.omega = omega;
     }
 
     @Override

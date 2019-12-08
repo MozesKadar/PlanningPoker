@@ -48,6 +48,7 @@ public class FirebaseHelpAdmin {
                 if (key.equals("Groups")){
                     for(DataSnapshot child: dataSnapshot.getChildren()){
                         admin.setGroups(child.getValue().toString());
+                        admin.setGroupID(child.getKey());
                     }
                 }
             }
@@ -64,7 +65,7 @@ public class FirebaseHelpAdmin {
                 if (key.equals("Groups")){
                     for(DataSnapshot child: dataSnapshot.getChildren()){
                         admin.setGroups(child.getValue().toString());
-                        admin.setGroupID(child.getKey());
+
                     }
                 }
             }

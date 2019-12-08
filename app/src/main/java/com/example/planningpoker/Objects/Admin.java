@@ -17,7 +17,7 @@ public class Admin {
 
     public Admin() {
         groups = new ArrayList<>();
-
+        groupID = new ArrayList<>();
     }
 
     public String getAdminName() {

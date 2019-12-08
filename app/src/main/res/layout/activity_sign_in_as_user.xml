@@ -11,7 +11,7 @@
         android:layout_width="277dp"
         android:layout_height="67dp"
         android:layout_marginTop="10dp"
-        android:text="@string/title"
+        android:text="@string/title1"
         android:textColor="#03A9F4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -15,7 +15,7 @@ public class SignInAsUser extends AppCompatActivity {
     private EditText groupId, nickname;
     private Button signin;
     public static final String EXTRA_ADMIN_NAME = "com.example.planningpoker.Admin";
-    public static final String EXTRA_ADMIN_GPID = "com.example.planningpoker.Admin";
+    public static final String EXTRA_ADMIN_GPID = "com.example.planningpoker.User";
     private String sGroupid, sNickname;
 
     @Override

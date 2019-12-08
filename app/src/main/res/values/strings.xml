@@ -4,6 +4,9 @@
     <string name="signInAsAdmin">Sign in as Admin</string>
     <string name="registerAsAdmin">Register as Admin</string>
     <string name="title">Planning Poker</string>
+    <string name="title1">Sign in as user</string>
+    <string name="title2">Sign in as admin</string>
+    <string name="title3">Register admin</string>
     <string name="nickname">Nickname</string>
     <string name="addGroup">Create Group</string>
     <string name="SignIN">Sign In</string>
