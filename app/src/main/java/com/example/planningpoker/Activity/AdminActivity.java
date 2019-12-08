@@ -47,8 +47,8 @@ public class AdminActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("Groups");
     DatabaseReference myRef2 = database.getReference("Admin");
-    private FirebaseHelpGroup fb_group;
-    private String myGroups;
+    private FirebaseHelpGroup fb_group, databaseGroup;
+    private String myGroups, sOpenGroup, groupsQuestions;
     private DatePickerDialog.OnDateSetListener mDateSetListener,mDateSetListener2;
 
     @Override
@@ -87,10 +87,33 @@ public class AdminActivity extends AppCompatActivity {
         openGroupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                sOpenGroup = openGroup.getText().toString();
+                databaseGroup = new FirebaseHelpGroup(sOpenGroup);
+
+                new CountDownTimer(2000, 2000) {
+                    public void onFinish() {
+                        if(databaseGroup.getGroup().getGroupOwner().equals(adminName)){
+                            for (int i=0;i<databaseGroup.getGroup().getQuestions().size();i++){
+                                groupsQuestions=groupsQuestions + databaseGroup.getGroup().getGroupName()+" "+ databaseGroup.getGroup().getQuestions().get(i).getQuestion();
+                            }
+
+                        }
+                        else{
+                            Toast.makeText(AdminActivity.this, "You don't have Group whit this number", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+
+                    public void onTick(long millisUntilFinished) {
+                        // millisUntilFinished    The amount of time until finished.
+                    }
+                }.start();
                 for (int i=0;i<fb.getAdmin().getGroups().size();i++){
                     myGroups = myGroups + " "+fb.getAdmin().getGroups().get(i)+ " "+fb.getAdmin().getGroupID().get(i);
                 }
-                    text.setText(myGroups);
+                    text.setText(groupsQuestions);
             }
         });
         date.setOnClickListener(new View.OnClickListener() {
