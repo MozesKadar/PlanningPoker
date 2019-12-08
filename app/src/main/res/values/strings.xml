@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PlanningPoker</string>
+    <string name="signInAsUser">Sign in as user</string>
+    <string name="signInAsAdmin">Sign in as Admin</string>
+    <string name="registerAsAdmin">Register as Admin</string>
+    <string name="title">Planning Poker</string>
+    <string name="nickname">Nickname</string>
+    <string name="addGroup">Create Group</string>
+    <string name="SignIN">Sign In</string>
+    <string name="egy">1</string>
+    <string name="ketto">2</string>
+    <string name="harom">3</string>
+    <string name="negy">4</string>
+    <string name="ot">5</string>
+    <string name="sendButton">Send</string>
+    <string name="leaveButton">Leave Session</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
